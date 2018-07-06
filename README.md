@@ -1,2 +1,2 @@
-# awesomeProject1
+# 学习go语言的开发项目
 go语言学习
