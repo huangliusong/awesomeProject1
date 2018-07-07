@@ -39,6 +39,15 @@ func apply(op func(int,int)int ,a,b int )int{
 func pow(a,b int) int{
 	return int(math.Pow(float64(a),float64(b)))
 }
+
+func sum(number ...int) int{
+	s:=0;
+	for i:=range number{
+		s+=number[i]
+	}
+
+	return s;
+}
 func main() {
 	if result,err:=eval(3,4,"/");err!=nil{
 		fmt.Println("error",err)
@@ -52,4 +61,5 @@ func main() {
 	fmt.Println(apply(func(a int,b int) int{
 		return int(math.Pow(float64(a),float64(b)))
 	},3,4))
+	fmt.Println(sum(1,2,3,4,5))
 }
